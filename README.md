@@ -1,2 +1,294 @@
 # vmacs
-A personal rust written terminal text editor that combines Vim and Emacs keybinds/commands and functionalities.
+
+**vmacs** is a lightweight, terminal-based text editor written in **Rust**.
+
+The project aims to provide a fast, keyboard-driven editing experience while keeping the codebase simple, understandable, and easy to extend.
+
+The name **vmacs** reflects the editor's current goal of combining ideas from both **Vim** and **Emacs** into a modern terminal editor built from the ground up in Rust.
+
+> **Status:** Early development — functionality and keybindings are still evolving.
+
+---
+
+## Features & Functionality
+
+> **This section is intentionally left open for development. Add, remove, or reorganize items as vmacs gains functionality.**
+
+### Editing
+
+* [ ] Text insertion
+* [ ] Text deletion
+* [ ] Newline insertion
+* [ ] Backspace / delete handling
+* [ ] Tab support
+* [ ] Cursor movement
+* [ ] Selection
+* [ ] Copy / cut / paste
+* [ ] Undo / redo
+* [ ] Multiple lines
+* [ ] Multiple buffers
+
+### Navigation
+
+* [ ] Character navigation
+* [ ] Word navigation
+* [ ] Line navigation
+* [ ] Beginning / end of line
+* [ ] Beginning / end of buffer
+* [ ] Page navigation
+* [ ] Jump to line
+
+### File Management
+
+* [ ] Open files
+* [ ] Create files
+* [ ] Save files
+* [ ] Save As
+* [ ] File path handling
+* [ ] Unsaved-change detection
+
+### Editor Modes
+
+* [ ] Insert mode
+* [ ] Normal mode
+* [ ] Command mode
+* [ ] Visual mode
+* [ ] Mode indicators
+
+### Commands
+
+* [ ] Command prompt
+* [ ] File commands
+* [ ] Search commands
+* [ ] Editor configuration
+* [ ] Custom commands
+
+### Search & Editing Tools
+
+* [ ] Text search
+* [ ] Search navigation
+* [ ] Find and replace
+* [ ] Case-sensitive search
+* [ ] Regular expressions
+
+### Configuration
+
+* [ ] User configuration file
+* [ ] Custom keybindings
+* [ ] Editor preferences
+* [ ] Theme configuration
+* [ ] Customizable settings
+
+### Interface
+
+* [ ] Status bar
+* [ ] Command line
+* [ ] Line numbers
+* [ ] Syntax highlighting
+* [ ] Scrollbar / scroll indicators
+* [ ] Error messages
+* [ ] Help screen
+
+### Planned / Experimental
+
+* [ ] Multiple windows / panes
+* [ ] Plugins
+* [ ] Macros
+* [ ] LSP support
+* [ ] Git integration
+* [ ] Project navigation
+* [ ] Terminal integration
+
+---
+
+## Why vmacs?
+
+There are already many excellent terminal editors. vmacs isn't intended to replace them.
+
+The project exists primarily as an exploration of:
+
+* Building a text editor from scratch
+* Learning Rust through a practical project
+* Designing a modal/keyboard-driven interface
+* Combining editing concepts from different editors
+* Creating a codebase that is small enough to understand and modify
+
+The goal is to keep vmacs **fast, minimal, and extensible** without sacrificing useful functionality.
+
+---
+
+## Keybindings
+
+vmacs is designed around keyboard-driven interaction.
+
+The keybindings are currently under development and may change as the editor evolves.
+
+### Current Philosophy
+
+The editor takes inspiration from both Vim and Emacs rather than attempting to strictly follow either editor.
+
+As the project develops, keybindings will be documented here.
+
+---
+
+## Installation
+
+### From Source
+
+Make sure you have a working Rust installation with Cargo.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/vmacs.git
+cd vmacs
+```
+
+Build the project:
+
+```bash
+cargo build --release
+```
+
+Run it with:
+
+```bash
+cargo run --release
+```
+
+The compiled binary can be found in:
+
+```text
+target/release/vmacs
+```
+
+You can optionally install it somewhere in your `PATH`:
+
+```bash
+cp target/release/vmacs ~/.local/bin/
+```
+
+> Installation instructions may change as the project develops.
+
+---
+
+## Configuration
+
+vmacs is planned to support a user configuration file located at:
+
+```text
+~/.vmacsrc
+```
+
+Configuration functionality is currently under development.
+
+Future configuration options may include:
+
+* Keybindings
+* Editor behavior
+* Appearance
+* Tabs and indentation
+* Search preferences
+* Custom commands
+
+---
+
+## Building
+
+vmacs uses Cargo for building and dependency management.
+
+Debug build:
+
+```bash
+cargo build
+```
+
+Release build:
+
+```bash
+cargo build --release
+```
+
+Run directly with Cargo:
+
+```bash
+cargo run
+```
+
+---
+
+## Project Structure
+
+The project is organized into separate components to keep the editor's functionality modular.
+
+The structure will evolve as more editor functionality is implemented.
+
+---
+
+## Dependencies
+
+vmacs is written in Rust and uses crates from the Rust ecosystem where appropriate.
+
+Current dependencies can be found in:
+
+```text
+Cargo.toml
+```
+
+---
+
+## Contributing
+
+Contributions, suggestions, bug reports, and ideas are welcome.
+
+If you want to contribute:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Test your changes.
+5. Open a pull request.
+
+For larger changes, opening an issue first can help discuss the idea before implementation.
+
+---
+
+## Roadmap
+
+vmacs is an evolving project.
+
+The general development direction is:
+
+```text
+Core Editor
+    ↓
+Input & Editing
+    ↓
+Commands & Navigation
+    ↓
+File Management
+    ↓
+Configuration
+    ↓
+UI Improvements
+    ↓
+Advanced Editor Features
+```
+
+The actual roadmap will change as the project develops.
+
+---
+
+## License
+
+vmacs is free and open-source software licensed under the **GNU General Public License v3.0**.
+
+See the [`LICENSE`](LICENSE) file for the complete license text.
+
+GPL-3.0 allows users to use, study, modify, and redistribute the software, while requiring distributed modified versions covered by the license to preserve the corresponding freedoms.
+
+---
+
+<p align="center">
+  <sub>Built with Rust 🦀</sub>
+</p>
