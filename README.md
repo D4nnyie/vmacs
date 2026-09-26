@@ -12,8 +12,6 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 ## Features & Functionality
 
-> **This section is intentionally left open for development. Add, remove, or reorganize items as vmacs gains functionality.**
-
 ### Editing
 
 * [x] Text insertion
