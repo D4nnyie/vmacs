@@ -148,6 +148,8 @@ As the project develops, keybindings will be documented here.
 * :q - quit
 * :wq - write and quit
 * :q! - force quit
+* :w *filename* - saves file with specified name
+* :wq *filename* - same as :w *filename*
 * more planned
 
 ## Emacs
@@ -164,6 +166,9 @@ As the project develops, keybindings will be documented here.
 * C^y - paste in line
 * C^x - save to file
 * C^s - search
+* C^w - save as
+* M^f - word forward
+* M^b - word backwards
 * more planned
 
 ## Both
