@@ -128,6 +128,53 @@ The editor takes inspiration from both Vim and Emacs rather than attempting to s
 
 As the project develops, keybindings will be documented here.
 
+## Vim
+
+**Keybinds**
+* h/l/k/j - moves cursor
+* dd  - deletes line
+* yy  - yanks line
+* x   - deletes one character
+* p/P - paste / paste before
+* i/I - enter insert mode / enter insert mode at the SOF
+* a/A - enter insert mode after / enter insert mode at the EOF
+* o/O - enter insert on new line below / enter insert on new line above
+* $   - end of line
+* w/b - word forwards/backwards
+* D   - delete to line end
+* more planned
+
+**Commands**
+ **Press : while in normal mode to start typing commands**
+* :w - write file
+* :q - quit
+* :wq - write and quit
+* :q! - force quit
+* more planned
+
+## Emacs
+
+**Keybinds**
+* C^a - start of line
+* C^e - end of line
+* C^f - move cursor right
+* C^b - move cursor left
+* C^n - move cursor down
+* C^p - move cursor up
+* C^d - delete
+* C^k - delete to line end
+* C^y - paste in line
+* C^x - save to file
+* C^s - search
+* more planned
+
+## Both
+
+* The arrow keys work for all modes.
+* The copy/cut/paste keybinds are all linked, C^y will work with yy and p will work with M^w when added.
+* Emacs keybinds are universal in all modes. Vim works only in normal mode.
+  
+
 ---
 
 ## Installation
