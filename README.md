@@ -219,6 +219,20 @@ cp target/release/vmacs ~/.local/bin/
 
 > Installation instructions may change as the project develops.
 
+### Makefile
+
+Clone the repository:
+
+```bash
+git clone https://github.com/D4nnyie/vmacs.git
+cd vmacs
+```
+
+Run:
+```bash
+make install
+```
+
 ---
 
 ## Configuration
