@@ -16,48 +16,48 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 ### Editing
 
-* [ ] Text insertion
-* [ ] Text deletion
-* [ ] Newline insertion
-* [ ] Backspace / delete handling
+* [x] Text insertion
+* [x] Text deletion
+* [x] Newline insertion
+* [x] Backspace / delete handling
 * [ ] Tab support
-* [ ] Cursor movement
+* [x] Cursor movement
 * [ ] Selection
-* [ ] Copy / cut / paste
+* [~] Copy / cut / paste
 * [ ] Undo / redo
-* [ ] Multiple lines
+* [x] Multiple lines
 * [ ] Multiple buffers
 
 ### Navigation
 
-* [ ] Character navigation
-* [ ] Word navigation
-* [ ] Line navigation
-* [ ] Beginning / end of line
-* [ ] Beginning / end of buffer
+* [x] Character navigation
+* [x] Word navigation
+* [x] Line navigation
+* [x] Beginning / end of line
+* [x] Beginning / end of buffer
 * [ ] Page navigation
 * [ ] Jump to line
 
 ### File Management
 
-* [ ] Open files
-* [ ] Create files
-* [ ] Save files
-* [ ] Save As
+* [x] Open files
+* [x] Create files
+* [x] Save files
+* [x] Save As
 * [ ] File path handling
-* [ ] Unsaved-change detection
+* [x] Unsaved-change detection
 
 ### Editor Modes
 
-* [ ] Insert mode
-* [ ] Normal mode
+* [x] Insert mode
+* [x] Normal mode
 * [ ] Command mode
 * [ ] Visual mode
-* [ ] Mode indicators
+* [x] Mode indicators
 
 ### Commands
 
-* [ ] Command prompt
+* [~] Command prompt
 * [ ] File commands
 * [ ] Search commands
 * [ ] Editor configuration
@@ -65,8 +65,8 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 ### Search & Editing Tools
 
-* [ ] Text search
-* [ ] Search navigation
+* [x] Text search
+* [~] Search navigation
 * [ ] Find and replace
 * [ ] Case-sensitive search
 * [ ] Regular expressions
@@ -81,13 +81,13 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 ### Interface
 
-* [ ] Status bar
-* [ ] Command line
+* [x] Status bar
+* [x] Command line
 * [ ] Line numbers
-* [ ] Syntax highlighting
+* [~] Syntax highlighting
 * [ ] Scrollbar / scroll indicators
 * [ ] Error messages
-* [ ] Help screen
+* [~] Help screen
 
 ### Planned / Experimental
 
@@ -107,7 +107,6 @@ There are already many excellent terminal editors. vmacs isn't intended to repla
 
 The project exists primarily as an exploration of:
 
-* Building a text editor from scratch
 * Learning Rust through a practical project
 * Designing a modal/keyboard-driven interface
 * Combining editing concepts from different editors
@@ -140,7 +139,7 @@ Make sure you have a working Rust installation with Cargo.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/vmacs.git
+git clone https://github.com/D4nnyie/vmacs.git
 cd vmacs
 ```
 
@@ -249,33 +248,19 @@ If you want to contribute:
 4. Test your changes.
 5. Open a pull request.
 
-For larger changes, opening an issue first can help discuss the idea before implementation.
-
 ---
 
-## Roadmap
+## Acknowledgements
 
-vmacs is an evolving project.
+vmacs was initially developed while following **Philipp Flenker's "Build Your Own Text Editor in Rust" tutorial**.
 
-The general development direction is:
+The tutorial was an important learning resource for understanding how a terminal text editor can be implemented in Rust and served as an early source of inspiration for vmacs.
 
-```text
-Core Editor
-    ↓
-Input & Editing
-    ↓
-Commands & Navigation
-    ↓
-File Management
-    ↓
-Configuration
-    ↓
-UI Improvements
-    ↓
-Advanced Editor Features
-```
+Even though some parts of the code are similar with the original editor, the goal is to change it until it feels like a new editor rather than a copy.
 
-The actual roadmap will change as the project develops.
+* **Tutorial:** [Build Your Own Text Editor in Rust](https://github.com/pflenker/hecto-tutorial)
+* **Author:** Philipp Flenker
+* **Example project:** [hecto](https://github.com/pflenker/hecto)
 
 ---
 
