@@ -176,6 +176,7 @@ As the project develops, keybindings will be documented here.
 * The arrow keys work for all modes.
 * The copy/cut/paste keybinds are all linked, C^y will work with yy and p will work with M^w when added.
 * Emacs keybinds are universal in all modes. Vim works only in normal mode.
+* Ctrl + Shift + V currently pastes anything copied from other applications. It does not sync with the editor's yank. Neither does Ctrl + Shift + C overwrite it.
   
 
 ---
