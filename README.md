@@ -32,7 +32,7 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 * [x] Word navigation
 * [x] Line navigation
 * [x] Beginning / end of line
-* [x] Beginning / end of buffer
+* [ ] Beginning / end of buffer
 * [ ] Page navigation
 * [ ] Jump to line
 
@@ -49,7 +49,6 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 * [x] Insert mode
 * [x] Normal mode
-* [ ] Command mode
 * [ ] Visual mode
 * [x] Mode indicators
 
