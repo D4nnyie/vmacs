@@ -12,6 +12,8 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 ## Features & Functionality
 
+* [~] - Incomplete | limited functionality added.
+
 ### Editing
 
 * [x] Text insertion
@@ -20,7 +22,7 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 * [x] Backspace / delete handling
 * [ ] Tab support
 * [x] Cursor movement
-* [ ] Selection
+* [x] Selection
 * [~] Copy / cut / paste
 * [ ] Undo / redo
 * [x] Multiple lines
@@ -32,9 +34,10 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 * [x] Word navigation
 * [x] Line navigation
 * [x] Beginning / end of line
-* [ ] Beginning / end of buffer
+* [x] Beginning / end of buffer
 * [ ] Page navigation
 * [ ] Jump to line
+* [x] Mouse support
 
 ### File Management
 
@@ -49,7 +52,7 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 * [x] Insert mode
 * [x] Normal mode
-* [ ] Visual mode
+* [x] Visual mode
 * [x] Mode indicators
 
 ### Commands
@@ -80,9 +83,9 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 * [x] Status bar
 * [x] Command line
-* [ ] Line numbers
+* [~] Line numbers
 * [~] Syntax highlighting
-* [ ] Scrollbar / scroll indicators
+* [x] Scrollbar / scroll indicators
 * [ ] Error messages
 * [~] Help screen
 
@@ -128,54 +131,94 @@ As the project develops, keybindings will be documented here.
 ## Vim
 
 **Keybinds**
-* h/l/k/j - moves cursor
-* dd  - deletes line
-* yy  - yanks line
-* x   - deletes one character
-* p/P - paste / paste before
-* i/I - enter insert mode / enter insert mode at the SOF
-* a/A - enter insert mode after / enter insert mode at the EOF
-* o/O - enter insert on new line below / enter insert on new line above
-* $   - end of line
-* w/b - word forwards/backwards
-* D   - delete to line end
+* h - Left
+* l - Right
+* k - Up
+* j - Down
+* 0 - SOL (Start of line)
+* $ - EOL (End of line)
+* w - word forwards
+* b - word Backspace
+* x - delete char
+* D - delete to line end
+* p - Paste
+* P - paste before
+* i - insert mode
+* a - insert mode, after cursor
+* o - insert mode, new line below
+* I - insert mode, line start
+* A - insert mode, line end
+* O - insert mode, new line above
+* dd - delete line
+* yy - yank line
+* gg - start of buffer
+* G - end of  buffer
+* : - command prompt
+* v - visual mode
 * more planned
 
 **Commands**
- **Press : while in normal mode to start typing commands**
-* :w - write file
 * :q - quit
-* :wq - write and quit
 * :q! - force quit
-* :w *filename* - saves file with specified name
-* :wq *filename* - same as :w *filename*
+* :w - write
+* :wq/:x - write and quit
+* :w <filename> - can save file with specified filename and format
+* :w /path/to/file - can save file into a specific path with a specific name and format
 * more planned
 
 ## Emacs
 
 **Keybinds**
-* C^a - start of line
-* C^e - end of line
-* C^f - move cursor right
-* C^b - move cursor left
-* C^n - move cursor down
-* C^p - move cursor up
-* C^d - delete
-* C^k - delete to line end
-* C^y - paste in line
-* C^x - save to file
+* C^a - SOL
+* C^e - EOL
+* C^f - Right
+* C^b - Left
+* C^n - Down
+* C^p - Up
+* C^d - Delete
+* C^k - Delete to line end
+* C^y - Paste in line
+* C^h - Delete Backwards (Backspace alternative)
+* M^f - word forwards
+* M^b - word Backwards
+* M^w - save as
+* C^x - save
 * C^s - search
-* C^w - save as
-* M^f - word forward
-* M^b - word backwards
+* C^q - quit
+* M^< - start of buffer
+* M^> - end of buffer
 * more planned
 
-## Both
+## Visual Mode
+* h - Left
+* l - Right
+* k - Up
+* j - Down
+* 0 - SOL
+* $ - EOL
+* w - word forwards
+* b - word Backspace
+* y - yank selected
+* d/x - delete selected
+* u - lowercase selected
+* U - uppercase selected
+* > - indent selected
+* < - dedent selected
+* g - start of buffer
+* G - end of buffer
+* v/ESC - exit visual mode
+* Ctrl + h & Backspace - can delete without being forced back to normal mode.
+
+## Universal
 
 * The arrow keys work for all modes.
 * The copy/cut/paste keybinds are all linked, C^y will work with yy and p will work with M^w when added.
-* Emacs keybinds are universal in all modes. Vim works only in normal mode.
-* Ctrl + Shift + V currently pastes anything copied from other applications. It does not sync with the editor's yank. Neither does Ctrl + Shift + C overwrite it.
+* Emacs-alike keybinds are universal in all modes.
+* Ctrl + Shift + V currently pastes anything copied from other applications. It does not sync with the editor's yank.
+* C^Home - start of buffer.
+* C^End  - end of buffer.
+* Mouse dragging should work in all available modes.
+* C^h can be used as an alternative if Backspace problems occur.
   
 
 ---
