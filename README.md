@@ -202,7 +202,7 @@ As the project develops, keybindings will be documented here.
 * d/x - delete selected
 * u - lowercase selected
 * U - uppercase selected
-* > - indent selected
+* \> - indent selected
 * < - dedent selected
 * g - start of buffer
 * G - end of buffer
