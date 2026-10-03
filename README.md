@@ -242,6 +242,8 @@ If you encounter a platform-specific issue, please open an issue with your opera
 
 ## Installation
 
+*Rust 1.90 or newer is required to build vmacs.*
+
 ### From Source
 
 Make sure you have a working Rust installation with Cargo.
