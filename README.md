@@ -50,9 +50,9 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 ### Editor Modes
 
-* [x] Insert mode
-* [x] Normal mode
-* [x] Visual mode
+* [x] Insert mode (Input)
+* [x] Normal mode (Control)
+* [x] Visual mode (Mark)
 * [x] Mode indicators
 
 ### Commands
