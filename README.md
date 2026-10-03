@@ -78,6 +78,7 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 * [ ] Editor preferences
 * [ ] Theme configuration
 * [ ] Customizable settings
+* [x] Custom language support
 
 ### Interface
 
@@ -92,7 +93,7 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 ### Planned / Experimental
 
 * [ ] Multiple windows / panes
-* [ ] Plugins
+* [~] Plugins
 * [ ] Macros
 * [ ] LSP support
 * [ ] Git integration
@@ -143,18 +144,18 @@ As the project develops, keybindings will be documented here.
 * D - delete to line end
 * p - Paste
 * P - paste before
-* i - insert mode
-* a - insert mode, after cursor
-* o - insert mode, new line below
-* I - insert mode, line start
-* A - insert mode, line end
-* O - insert mode, new line above
+* i - input mode
+* a - input mode, after cursor
+* o - input mode, new line below
+* I - input mode, line start
+* A - input mode, line end
+* O - input mode, new line above
 * dd - delete line
 * yy - yank line
 * gg - start of buffer
 * G - end of  buffer
 * : - command prompt
-* v - visual mode
+* v - mark mode
 * more planned
 
 **Commands**
@@ -189,7 +190,7 @@ As the project develops, keybindings will be documented here.
 * M^> - end of buffer
 * more planned
 
-## Visual Mode
+## Mark Mode (Visual)
 * h - Left
 * l - Right
 * k - Up
@@ -214,12 +215,28 @@ As the project develops, keybindings will be documented here.
 * The arrow keys work for all modes.
 * The copy/cut/paste keybinds are all linked, C^y will work with yy and p will work with M^w when added.
 * Emacs-alike keybinds are universal in all modes.
-* Ctrl + Shift + V currently pastes anything copied from other applications. It does not sync with the editor's yank.
+* Ctrl + Shift + V pastes anything copied from the system's clipboard. It does not sync with the editor's yank.
+* Ctrl + Shift + Y copies to system's clipboard.
 * C^Home - start of buffer.
 * C^End  - end of buffer.
 * Mouse dragging should work in all available modes.
 * C^h can be used as an alternative if Backspace problems occur.
-  
+
+---
+
+## Platform Support
+
+vmacs is actively developed on linux, so support for other platforms is not guaranteed.
+
+### Supported / Intended Platforms:
+* [x] Linux ```Tested```
+* [ ] macOS ```Untested```
+* [ ] Windows ```Untested```
+* [ ] BSD and other unix-like platforms ```Untested```
+
+vmacs is designed to be cross-platform and runs in a terminal, using Rust and Crossterm for terminal interaction.
+
+If you encounter a platform-specific issue, please open an issue with your operating system, terminal emulator, and relevant error/output.
 
 ---
 
@@ -296,6 +313,99 @@ Future configuration options may include:
 * Tabs and indentation
 * Search preferences
 * Custom commands
+
+---
+
+## Custom language
+
+vmacs supports simple custom languages syntax. These can be added at ~/.config/vmacs/languages, %APPDATA%\vmacs\languages\ or $XDG_CONFIG_HOME/vmacs/languages/. An example toml file can be found there.
+
+Detailed explanation:
+
+```toml
+# Custom language configuration for vmacs.
+#
+# Save this file as:
+#   ~/.config/vmacs/languages/mylang.toml
+#
+# You can also use the platform's standard config directory:
+#   Linux/macOS/BSD: $XDG_CONFIG_HOME/vmacs/languages/
+#   Windows:         %APPDATA%\vmacs\languages\
+
+# Display name of the language.
+name = "MyLang"
+
+# File extensions that should be recognized as this language.
+# For example, "file.myl" and "file.ml2" will use this configuration.
+extensions = ["myl", "ml2"]
+
+# Words that should be highlighted as language keywords.
+keywords = ["task", "emit", "when", "else", "end", "let"]
+
+# Built-in type names used by the language.
+types = ["Int", "Text", "Bool"]
+
+# Built-in constants or special values.
+known_values = ["yes", "no", "nil"]
+
+# Single-line comment delimiter.
+# Everything after this delimiter is treated as a comment until the end of the line.
+line_comment = "#"
+
+# Multi-line comment delimiters.
+# The first value opens the comment and the second closes it.
+# Example: /* comment */
+block_comment = ["/*", "*/"]
+
+# String delimiters.
+# Each pair contains an opening and closing delimiter.
+# The longest matching opener is preferred when multiple delimiters could match.
+#
+# This example supports:
+#   "normal string"
+#   'single-quoted string'
+#   """multi-line string"""
+string_delimiters = [["\"", "\""], ["'", "'"], ["\"\"\"", "\"\"\""]]
+
+# String delimiters that are allowed to continue across multiple lines.
+# These must also be present in string_delimiters above.
+multiline_strings = ["\"\"\""]
+
+# Characters or keywords that trigger automatic indentation
+# when pressing Enter after them.
+#
+# For example:
+#   task {
+#       <- automatically indented
+#
+# You can use symbols such as "{", "(", "[" or language keywords
+# such as "do" and "then".
+indent_triggers = ["{", "(", "[", "do", "then"]
+
+# Whether keywords, types, and other language elements are
+# matched without considering uppercase/lowercase differences.
+#
+# false:
+#   "Task" and "task" are different
+#
+# true:
+#   "Task" and "task" are treated as the same
+case_insensitive = false
+
+# Whether the language has a separate character literal syntax.
+#
+# Set this to true for languages that support things such as:
+#   'a'
+#
+# Set this to false if single quotes are only used for strings.
+supports_char_literal = false
+
+# Whether the language uses lifetime syntax, such as Rust's:
+#   'a
+#
+# This is mainly useful for languages with Rust-style lifetimes.
+supports_lifetime = false
+```
 
 ---
 
