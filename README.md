@@ -1,12 +1,12 @@
-# vmacs
+# vMACS -- Versatile Modal And Command System
 
-**vmacs** is a lightweight, terminal-based text editor written in **Rust**.
+**vMACS** is a lightweight, terminal-based text editor written in **Rust**.
 
 The project aims to provide a fast, keyboard-driven editing experience while keeping the codebase simple, understandable, and easy to extend.
 
-The name **vmacs** reflects the editor's current goal of combining ideas from both **Vim** and **Emacs** into a modern terminal editor built from the ground up in Rust.
+The name **vMACS** reflects the editor's current goal of combining ideas from **Vim**, **Emacs** and other alike editors into a modern terminal editor built in Rust.
 
-> **Status:** Early development — functionality and keybindings are still evolving.
+> **Status:** Late Prototype / Early development — the editor is still evolving.
 
 ---
 
@@ -102,9 +102,9 @@ The name **vmacs** reflects the editor's current goal of combining ideas from bo
 
 ---
 
-## Why vmacs?
+## Why vMACS?
 
-There are already many excellent terminal editors. vmacs isn't intended to replace them.
+There are already many excellent terminal editors. vMACS isn't intended to replace them.
 
 The project exists primarily as an exploration of:
 
@@ -113,13 +113,13 @@ The project exists primarily as an exploration of:
 * Combining editing concepts from different editors
 * Creating a codebase that is small enough to understand and modify
 
-The goal is to keep vmacs **fast, minimal, and extensible** without sacrificing useful functionality.
+The goal is to keep vMACS **fast, minimal, and extensible** without sacrificing useful functionality.
 
 ---
 
 ## Keybindings
 
-vmacs is designed around keyboard-driven interaction.
+vMACS is designed around keyboard-driven interaction.
 
 The keybindings are currently under development and may change as the editor evolves.
 
@@ -226,7 +226,7 @@ As the project develops, keybindings will be documented here.
 
 ## Platform Support
 
-vmacs is actively developed on linux, so support for other platforms is not guaranteed.
+vMACS is actively developed on linux, so support for other platforms is not guaranteed.
 
 ### Supported / Intended Platforms:
 * [x] Linux ```Tested```
@@ -234,7 +234,7 @@ vmacs is actively developed on linux, so support for other platforms is not guar
 * [ ] Windows ```Untested```
 * [ ] BSD and other unix-like platforms ```Untested```
 
-vmacs is designed to be cross-platform and runs in a terminal, using Rust and Crossterm for terminal interaction.
+vMACS is designed to be cross-platform and runs in a terminal, using Rust and Crossterm for terminal interaction.
 
 If you encounter a platform-specific issue, please open an issue with your operating system, terminal emulator, and relevant error/output.
 
@@ -242,7 +242,7 @@ If you encounter a platform-specific issue, please open an issue with your opera
 
 ## Installation
 
-*Rust 1.90 or newer is required to build vmacs.*
+*Rust 1.90 or newer is required to build vMACS.*
 
 ### From Source
 
@@ -299,7 +299,7 @@ make install
 
 ## Configuration
 
-vmacs is planned to support a user configuration file located at:
+vMACS is planned to support a user configuration file located at:
 
 ```text
 ~/.vmacsrc
@@ -320,12 +320,12 @@ Future configuration options may include:
 
 ## Custom language
 
-vmacs supports simple custom languages syntax. These can be added at ~/.config/vmacs/languages, %APPDATA%\vmacs\languages\ or $XDG_CONFIG_HOME/vmacs/languages/. An example toml file can be found there.
+vMACS supports simple custom languages syntax. These can be added at ~/.config/vMACS/languages, %APPDATA%\vMACS\languages\ or $XDG_CONFIG_HOME/vMACS/languages/. An example toml file can be found there.
 
 Detailed explanation:
 
 ```toml
-# Custom language configuration for vmacs.
+# Custom language configuration for vMACS.
 #
 # Save this file as:
 #   ~/.config/vmacs/languages/mylang.toml
@@ -413,7 +413,7 @@ supports_lifetime = false
 
 ## Building
 
-vmacs uses Cargo for building and dependency management.
+vMACS uses Cargo for building and dependency management.
 
 Debug build:
 
@@ -445,7 +445,7 @@ The structure will evolve as more editor functionality is implemented.
 
 ## Dependencies
 
-vmacs is written in Rust and uses crates from the Rust ecosystem where appropriate.
+vMACS is written in Rust and uses crates from the Rust ecosystem where appropriate.
 
 Current dependencies can be found in:
 
@@ -471,9 +471,9 @@ If you want to contribute:
 
 ## Acknowledgements
 
-vmacs was initially developed while following **Philipp Flenker's "Build Your Own Text Editor in Rust" tutorial**.
+vMACS was initially developed while following **Philipp Flenker's "Build Your Own Text Editor in Rust" tutorial**.
 
-The tutorial was an important learning resource for understanding how a terminal text editor can be implemented in Rust and served as an early source of inspiration for vmacs.
+The tutorial was an important learning resource for understanding how a terminal text editor can be implemented in Rust and served as an early source of inspiration for vMACS.
 
 Even though some parts of the code are similar with the original editor, the goal is to change it until it feels like a new editor rather than a copy.
 
@@ -485,7 +485,7 @@ Even though some parts of the code are similar with the original editor, the goa
 
 ## License
 
-vmacs is free and open-source software licensed under the **GNU General Public License v3.0**.
+vMACS is free and open-source software licensed under the **GNU General Public License v3.0**.
 
 See the [`LICENSE`](LICENSE) file for the complete license text.
 
