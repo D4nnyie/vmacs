@@ -8,7 +8,7 @@ CONFIG_DIR := $(HOME)/.config/vmacs
 LANGUAGE_DIR := $(CONFIG_DIR)/languages
 LANGUAGE_FILE := $(LANGUAGE_DIR)/mylang.toml
 
-.PHONY: all build install uninstall clean
+.PHONY: all build install uninstall test clean
 
 all: build
 
@@ -21,8 +21,8 @@ install: build
 	@if [ ! -f "$(LANGUAGE_FILE)" ]; then \
 		printf '%s\n' \
 			'# Example custom language configuration' \
-			'name = "MyLang"' \
-			'extensions = ["myl", "ml2"]' \
+			'name = "ExampleLang"' \
+			'extensions = ["exl", "example"]' \
 			'' \
 			'keywords = ["task", "emit", "when", "else", "end", "let"]' \
 			'types = ["Int", "Text", "Bool"]' \
@@ -51,6 +51,9 @@ install: build
 
 uninstall:
 	sudo rm -f $(DESTDIR)$(PREFIX)/bin/$(BINARY)
+
+test:
+	cargo test
 
 clean:
 	cargo clean
