@@ -1,4 +1,4 @@
-# vMACS — Versatile Modal And Command System
+# `<\:>` vMACS — Versatile Modal And Command System
 
 **vMACS** is a lightweight, terminal-based text editor written in **Rust**, designed to combine ideas from Vim, Emacs, and other keyboard-driven editors into a single, extensible editing environment.
 
