@@ -1,252 +1,179 @@
-# vMACS -- Versatile Modal And Command System
+# vMACS — Versatile Modal And Command System
 
-**vMACS** is a lightweight, terminal-based text editor written in **Rust**.
+**vMACS** is a lightweight, terminal-based text editor written in **Rust**, designed to combine ideas from Vim, Emacs, and other keyboard-driven editors into a single, extensible editing environment.
 
-The project aims to provide a fast, keyboard-driven editing experience while keeping the codebase simple, understandable, and easy to extend.
+Built around a modal editing system, vMACS aims to provide efficient keyboard-driven workflows, practical editing tools, customizable behavior, and a codebase that remains understandable and easy to extend.
 
-The name **vMACS** reflects the editor's current goal of combining ideas from **Vim**, **Emacs** and other alike editors into a modern terminal editor built in Rust.
+Rather than strictly replicating an existing editor, vMACS takes inspiration from different approaches to text editing to develop its own identity.
 
-> **Status:** Late Prototype / Early development — the editor is still evolving.
+> **Development status:** Late prototype / early-stage development. vMACS is functional and actively evolving. Features, keybindings, and configuration options may change between releases.
 
 ---
 
-## Features & Functionality
-
-* [~] - Incomplete | limited functionality added.
+## Features
 
 ### Editing
 
-* [x] Text insertion
-* [x] Text deletion
-* [x] Newline insertion
-* [x] Backspace / delete handling
-* [ ] Tab support
-* [x] Cursor movement
-* [x] Selection
-* [~] Copy / cut / paste
-* [ ] Undo / redo
-* [x] Multiple lines
-* [ ] Multiple buffers
+- [x] Text insertion and deletion
+- [x] Newline insertion and deletion handling
+- [x] Tab support
+- [x] Cursor movement
+- [x] Text selection
+- [x] Copy, cut, and paste
+- [x] Undo and redo
+- [x] Multi-line editing
+- [ ] Multiple buffers
 
 ### Navigation
 
-* [x] Character navigation
-* [x] Word navigation
-* [x] Line navigation
-* [x] Beginning / end of line
-* [x] Beginning / end of buffer
-* [ ] Page navigation
-* [ ] Jump to line
-* [x] Mouse support
+- [x] Character and word navigation
+- [x] Line navigation
+- [x] Beginning and end of line
+- [x] Beginning and end of buffer
+- [x] Page navigation
+- [x] Jump to line
+- [x] Mouse navigation and interaction
 
 ### File Management
 
-* [x] Open files
-* [x] Create files
-* [x] Save files
-* [x] Save As
-* [ ] File path handling
-* [x] Unsaved-change detection
+- [x] Open existing files
+- [x] Create files that do not exist
+- [x] Save and Save As
+- [x] File path handling
+- [x] Unsaved-change detection
+- [x] Built-in file manager
+- [x] Recent files dashboard
 
-### Editor Modes
+### Editing Modes
 
-* [x] Insert mode (Input)
-* [x] Normal mode (Control)
-* [x] Visual mode (Mark)
-* [x] Mode indicators
+vMACS uses three editing modes:
+
+- [x] **CONTROL** — Modal navigation and command-oriented editing, inspired by Vim's normal mode.
+- [x] **INPUT** — Text insertion and modification, similar to Vim's insert mode.
+- [x] **MARK** — Text selection and visual editing, inspired by Vim's visual mode.
+- [x] Mode indicators
 
 ### Commands
 
-* [~] Command prompt
-* [ ] File commands
-* [ ] Search commands
-* [ ] Editor configuration
-* [ ] Custom commands
+- [x] Command prompt
+- [~] File commands — implemented, with functionality still evolving
+- [x] Search commands
+- [x] Search and replace
+- [x] Go-to-line commands
+- [x] Configuration commands
+- [x] Custom command prompt (`\`)
+- [x] Detailed error messages
 
-### Search & Editing Tools
+### Search and Editing Tools
 
-* [x] Text search
-* [~] Search navigation
-* [ ] Find and replace
-* [ ] Case-sensitive search
-* [ ] Regular expressions
+- [x] Text search
+- [x] Search result navigation
+- [x] Find and replace
+- [x] Case-sensitive search
+- [x] Regular-expression search
+- [x] System clipboard integration
+- [x] Context-dependent middle-click copy and paste
 
-### Configuration
+### Configuration and Extensibility
 
-* [ ] User configuration file
-* [ ] Custom keybindings
-* [ ] Editor preferences
-* [ ] Theme configuration
-* [ ] Customizable settings
-* [x] Custom language support
+- [x] User configuration file
+- [x] Configurable mouse behavior
+- [x] Custom language configurations
+- [x] User-defined commands
+- [ ] Custom keybindings
+- [ ] Theme configuration
+- [ ] Comprehensive editor preferences
 
 ### Interface
 
-* [x] Status bar
-* [x] Command line
-* [~] Line numbers
-* [~] Syntax highlighting
-* [x] Scrollbar / scroll indicators
-* [ ] Error messages
-* [~] Help screen
+- [x] Dashboard
+- [x] Redesigned editor interface
+- [x] Status bar and command line
+- [x] Line numbers
+- [x] Current-line highlighting
+- [x] Syntax highlighting
+- [x] Scroll indicators
+- [x] Selection highlighting, including empty lines
+- [x] Help screen
+- [x] Error reporting
 
-### Planned / Experimental
+### Planned and Experimental
 
-* [ ] Multiple windows / panes
-* [~] Plugins
-* [ ] Macros
-* [ ] LSP support
-* [ ] Git integration
-* [ ] Project navigation
-* [ ] Terminal integration
+- [ ] Multiple windows or panes
+- [~] Extended plugin functionality
+- [ ] Macros
+- [ ] Language Server Protocol (LSP) support
+- [ ] Git integration
+- [ ] Project navigation
+- [ ] Integrated terminal
+
+**Legend:** `[x]` Implemented · `[~]` Partially implemented or still evolving · `[ ]` Planned
 
 ---
 
 ## Why vMACS?
 
-There are already many excellent terminal editors. vMACS isn't intended to replace them.
+There are already many excellent terminal editors, and vMACS is not intended to replace them.
 
-The project exists primarily as an exploration of:
+The project is an exploration of several ideas:
 
-* Learning Rust through a practical project
-* Designing a modal/keyboard-driven interface
-* Combining editing concepts from different editors
-* Creating a codebase that is small enough to understand and modify
+- **Learning Rust** through the development of a practical application.
+- **Modal editing** that makes navigation and editing efficient without relying entirely on the mouse.
+- **Combining editing philosophies** from Vim, Emacs, and other editors.
+- **Extensibility** through custom language definitions and user-defined commands.
+- **Simplicity and maintainability** without sacrificing useful functionality.
+- **Independent design** through a distinct interface, color scheme, and command system.
 
-The goal is to keep vMACS **fast, minimal, and extensible** without sacrificing useful functionality.
+The long-term goal is to make vMACS **fast, practical, configurable, and extensible**, while keeping its implementation understandable.
 
 ---
 
-## Keybindings
+## Keybindings and Editing Modes
 
-vMACS is designed around keyboard-driven interaction.
+vMACS is designed around keyboard-driven interaction, with three modes: CONTROL, INPUT, and MARK.
 
-The keybindings are currently under development and may change as the editor evolves.
+Its keybindings take inspiration from Vim and Emacs without attempting to reproduce either editor exactly. Keybindings and workflows may evolve as development continues.
 
-### Current Philosophy
+To view the current keybindings:
 
-The editor takes inspiration from both Vim and Emacs rather than attempting to strictly follow either editor.
+- Press `h` on the dashboard.
+- Run `:help` in the editor's command prompt.
 
-As the project develops, keybindings will be documented here.
-
-## Vim
-
-**Keybinds**
-* h - Left
-* l - Right
-* k - Up
-* j - Down
-* 0 - SOL (Start of line)
-* $ - EOL (End of line)
-* w - word forwards
-* b - word Backspace
-* x - delete char
-* D - delete to line end
-* p - Paste
-* P - paste before
-* i - input mode
-* a - input mode, after cursor
-* o - input mode, new line below
-* I - input mode, line start
-* A - input mode, line end
-* O - input mode, new line above
-* dd - delete line
-* yy - yank line
-* gg - start of buffer
-* G - end of  buffer
-* : - command prompt
-* v - mark mode
-* more planned
-
-**Commands**
-* :q - quit
-* :q! - force quit
-* :w - write
-* :wq/:x - write and quit
-* :w <filename> - can save file with specified filename and format
-* :w /path/to/file - can save file into a specific path with a specific name and format
-* more planned
-
-## Emacs
-
-**Keybinds**
-* C^a - SOL
-* C^e - EOL
-* C^f - Right
-* C^b - Left
-* C^n - Down
-* C^p - Up
-* C^d - Delete
-* C^k - Delete to line end
-* C^y - Paste in line
-* C^h - Delete Backwards (Backspace alternative)
-* M^f - word forwards
-* M^b - word Backwards
-* M^w - save as
-* C^x - save
-* C^s - search
-* C^q - quit
-* M^< - start of buffer
-* M^> - end of buffer
-* more planned
-
-## Mark Mode (Visual)
-* h - Left
-* l - Right
-* k - Up
-* j - Down
-* 0 - SOL
-* $ - EOL
-* w - word forwards
-* b - word Backspace
-* y - yank selected
-* d/x - delete selected
-* u - lowercase selected
-* U - uppercase selected
-* \> - indent selected
-* < - dedent selected
-* g - start of buffer
-* G - end of buffer
-* v/ESC - exit visual mode
-* Ctrl + h & Backspace - can delete without being forced back to normal mode.
-
-## Universal
-
-* The arrow keys work for all modes.
-* The copy/cut/paste keybinds are all linked, C^y will work with yy and p will work with M^w when added.
-* Emacs-alike keybinds are universal in all modes.
-* Ctrl + Shift + V pastes anything copied from the system's clipboard. It does not sync with the editor's yank.
-* Ctrl + Shift + Y copies to system's clipboard.
-* C^Home - start of buffer.
-* C^End  - end of buffer.
-* Mouse dragging should work in all available modes.
-* C^h can be used as an alternative if Backspace problems occur.
+Refer to the built-in help screen for the keybindings supported by your installed version.
 
 ---
 
 ## Platform Support
 
-vMACS is actively developed on linux, so support for other platforms is not guaranteed.
+vMACS is primarily developed and tested on Linux. Other platforms are intended targets but have not been fully verified.
 
-### Supported / Intended Platforms:
-* [x] Linux ```Tested```
-* [ ] macOS ```Untested```
-* [ ] Windows ```Untested```
-* [ ] BSD and other unix-like platforms ```Untested```
+| Platform | Status |
+|---|---|
+| Linux | Tested |
+| macOS | Untested |
+| Windows | Untested |
+| BSD and other Unix-like systems | Untested |
 
-vMACS is designed to be cross-platform and runs in a terminal, using Rust and Crossterm for terminal interaction.
+vMACS uses Rust and Crossterm for terminal interaction, providing a foundation for cross-platform support. However, compatibility may depend on the operating system, terminal emulator, toolchain, and system libraries.
 
-If you encounter a platform-specific issue, please open an issue with your operating system, terminal emulator, and relevant error/output.
+If you encounter a platform-specific issue, please open a GitHub issue and include your operating system, terminal emulator, Rust version, and relevant error output.
+
+---
+
+## Requirements
+
+- **Rust 1.90 or newer** to build vMACS.
+- A working Rust installation with Cargo.
+- A **Powerline-compatible font** for the intended interface appearance.
+- A compatible terminal emulator.
+
+The editor is developed primarily on Linux. Compatibility with other platforms is not guaranteed at this stage.
 
 ---
 
 ## Installation
 
-*Rust 1.90 or newer is required to build vMACS.*
-
-### From Source
-
-Make sure you have a working Rust installation with Cargo.
+### Build from source
 
 Clone the repository:
 
@@ -255,163 +182,184 @@ git clone https://github.com/D4nnyie/vmacs.git
 cd vmacs
 ```
 
-Build the project:
+Build the optimized release:
 
 ```bash
 cargo build --release
 ```
 
-Run it with:
+Run vMACS:
 
 ```bash
 cargo run --release
 ```
 
-The compiled binary can be found in:
+The compiled executable is located at:
 
 ```text
 target/release/vmacs
 ```
 
-You can optionally install it somewhere in your `PATH`:
+### Install manually
+
+You can copy the executable into a directory in your `PATH`:
 
 ```bash
+mkdir -p ~/.local/bin
 cp target/release/vmacs ~/.local/bin/
 ```
 
-> Installation instructions may change as the project develops.
+Make sure `~/.local/bin` is included in your `PATH`.
 
-### Makefile
+### Install using Make
 
-Clone the repository:
+From the repository directory, run:
 
-```bash
-git clone https://github.com/D4nnyie/vmacs.git
-cd vmacs
-```
-
-Run:
 ```bash
 make install
 ```
+
+The Makefile handles installation according to its configured installation prefix and may require elevated privileges, depending on the destination.
+
+> Installation instructions may evolve as vMACS develops. Check the repository for the latest build and installation requirements.
 
 ---
 
 ## Configuration
 
-vMACS is planned to support a user configuration file located at:
+vMACS uses a TOML configuration file located at:
 
 ```text
-~/.vmacsrc
+~/.config/vmacs/config.toml
 ```
 
-Configuration functionality is currently under development.
+The configuration file controls supported editor settings, including configurable mouse behavior and custom commands.
 
-Future configuration options may include:
+If the configuration file has not been created automatically, run:
 
-* Keybindings
-* Editor behavior
-* Appearance
-* Tabs and indentation
-* Search preferences
-* Custom commands
+```text
+:config
+:reload
+```
+
+Use `:reload` after changing configuration when you need vMACS to reload its settings.
+
+The exact options supported depend on the current version. Refer to the example configuration and comments provided by the project.
+
+### Custom commands
+
+vMACS provides a separate custom-command prompt, opened using the `\` command prefix.
+
+Custom commands are defined in `config.toml`, allowing users to configure their own commands without modifying the editor's source code.
+
+Custom commands have resource limits to keep configuration loading and execution manageable. See the configuration examples and implementation for the current limits.
 
 ---
 
-## Custom language
+## Custom Language Support
 
-vMACS supports simple custom languages syntax. These can be added at ~/.config/vMACS/languages, %APPDATA%\vMACS\languages\ or $XDG_CONFIG_HOME/vMACS/languages/. An example toml file can be found there.
+vMACS supports user-defined language configurations through TOML files. These configurations let you define basic syntax-highlighting rules and selected language behavior without implementing a dedicated language module.
 
-Detailed explanation:
+### Configuration directories
+
+Place custom language configurations in the appropriate directory for your system:
+
+| Platform | Directory |
+|---|---|
+| Linux | `~/.config/vmacs/languages/` |
+| Linux or Unix-like systems using XDG | `$XDG_CONFIG_HOME/vmacs/languages/` |
+| macOS | `~/.config/vmacs/languages/` or the configured XDG directory |
+| Windows | `%APPDATA%\vmacs\languages\` |
+
+If `XDG_CONFIG_HOME` is set, use that directory instead of the default `~/.config` location.
+
+Each language configuration should be saved as a `.toml` file. An example configuration is provided below.
+
+### Example language configuration
+
+The following example defines a fictional language called `MyLang`.
+
+Save it as `mylang.toml` in your language configuration directory.
 
 ```toml
-# Custom language configuration for vMACS.
-#
-# Save this file as:
-#   ~/.config/vmacs/languages/mylang.toml
-#
-# You can also use the platform's standard config directory:
-#   Linux/macOS/BSD: $XDG_CONFIG_HOME/vmacs/languages/
-#   Windows:         %APPDATA%\vmacs\languages\
-
 # Display name of the language.
 name = "MyLang"
 
-# File extensions that should be recognized as this language.
-# For example, "file.myl" and "file.ml2" will use this configuration.
+# File extensions recognized by this configuration.
 extensions = ["myl", "ml2"]
 
-# Words that should be highlighted as language keywords.
+# Keywords, built-in types, and known values.
 keywords = ["task", "emit", "when", "else", "end", "let"]
-
-# Built-in type names used by the language.
 types = ["Int", "Text", "Bool"]
-
-# Built-in constants or special values.
 known_values = ["yes", "no", "nil"]
 
-# Single-line comment delimiter.
-# Everything after this delimiter is treated as a comment until the end of the line.
+# Single-line comments.
 line_comment = "#"
 
-# Multi-line comment delimiters.
-# The first value opens the comment and the second closes it.
-# Example: /* comment */
+# Multi-line comments: opening delimiter, closing delimiter.
 block_comment = ["/*", "*/"]
 
-# String delimiters.
-# Each pair contains an opening and closing delimiter.
-# The longest matching opener is preferred when multiple delimiters could match.
-#
-# This example supports:
-#   "normal string"
-#   'single-quoted string'
-#   """multi-line string"""
-string_delimiters = [["\"", "\""], ["'", "'"], ["\"\"\"", "\"\"\""]]
+# String delimiter pairs.
+string_delimiters = [
+    ['"', '"'],
+    ["'", "'"],
+    ['"""', '"""']
+]
 
-# String delimiters that are allowed to continue across multiple lines.
-# These must also be present in string_delimiters above.
-multiline_strings = ["\"\"\""]
+# Delimiters that can span multiple lines.
+# These must also be declared in string_delimiters.
+multiline_strings = ['"""']
 
-# Characters or keywords that trigger automatic indentation
-# when pressing Enter after them.
-#
-# For example:
-#   task {
-#       <- automatically indented
-#
-# You can use symbols such as "{", "(", "[" or language keywords
-# such as "do" and "then".
+# Tokens that trigger automatic indentation after Enter.
 indent_triggers = ["{", "(", "[", "do", "then"]
 
-# Whether keywords, types, and other language elements are
-# matched without considering uppercase/lowercase differences.
-#
-# false:
-#   "Task" and "task" are different
-#
-# true:
-#   "Task" and "task" are treated as the same
+# Whether matching ignores letter case.
 case_insensitive = false
 
-# Whether the language has a separate character literal syntax.
-#
-# Set this to true for languages that support things such as:
-#   'a'
-#
-# Set this to false if single quotes are only used for strings.
+# Whether single-quoted character literals are supported.
 supports_char_literal = false
 
-# Whether the language uses lifetime syntax, such as Rust's:
-#   'a
-#
-# This is mainly useful for languages with Rust-style lifetimes.
+# Whether Rust-style lifetime syntax is supported.
 supports_lifetime = false
 ```
 
+### Available language options
+
+| Option | Purpose |
+|---|---|
+| `name` | Display name of the language |
+| `extensions` | File extensions associated with the language |
+| `keywords` | Words highlighted as keywords |
+| `types` | Built-in type names |
+| `known_values` | Built-in constants and special values |
+| `line_comment` | Single-line comment delimiter |
+| `block_comment` | Opening and closing delimiters for block comments |
+| `string_delimiters` | Supported string opening and closing delimiters |
+| `multiline_strings` | String delimiters that may span multiple lines |
+| `indent_triggers` | Tokens that trigger automatic indentation |
+| `case_insensitive` | Whether language-element matching ignores case |
+| `supports_char_literal` | Whether character-literal syntax is supported |
+| `supports_lifetime` | Whether Rust-style lifetime syntax is supported |
+
+Custom language configurations provide basic syntax support; they are not a substitute for a full parser or language server.
+
+### Configuration limits
+
+To keep resource usage predictable, vMACS imposes limits on user-defined configurations. Current limits include:
+
+- Language and main configuration file sizes: **128 KiB**.
+- Custom language configuration files: **32**.
+- Keywords, types, and known values: **2,000 entries each**, with a maximum of **64 bytes per word**.
+- String delimiter pairs and multiline string delimiters: **16 each**.
+- Delimiters, comment markers, and indentation triggers: **1–16 bytes**, without control characters.
+- Extensions and filenames: **32 entries each**, with a maximum of **64 bytes per entry**.
+- Custom commands: **256 commands**, with up to **32 lines per command** and **1,024 bytes per line**.
+
+These limits may change in future releases. Increasing them directly in the source code is possible in some cases, but larger limits may increase memory usage and should be changed only when necessary.
+
 ---
 
-## Building
+## Building and Development
 
 vMACS uses Cargo for building and dependency management.
 
@@ -421,51 +369,49 @@ Debug build:
 cargo build
 ```
 
-Release build:
+Optimized release build:
 
 ```bash
 cargo build --release
 ```
 
-Run directly with Cargo:
+Run in debug mode:
 
 ```bash
 cargo run
 ```
 
+Run the optimized release:
+
+```bash
+cargo run --release
+```
+
+The project's dependencies and their versions are declared in `Cargo.toml`.
+
 ---
 
 ## Project Structure
 
-The project is organized into separate components to keep the editor's functionality modular.
+vMACS is organized into separate Rust modules to keep its editing, interface, configuration, and language-related functionality modular.
 
-The structure will evolve as more editor functionality is implemented.
-
----
-
-## Dependencies
-
-vMACS is written in Rust and uses crates from the Rust ecosystem where appropriate.
-
-Current dependencies can be found in:
-
-```text
-Cargo.toml
-```
+The internal structure may change as development continues. Contributions should follow the existing project organization and avoid unnecessary coupling between components.
 
 ---
 
 ## Contributing
 
-Contributions, suggestions, bug reports, and ideas are welcome.
+Contributions, suggestions, bug reports, and feature requests are welcome.
 
 If you want to contribute:
 
 1. Fork the repository.
-2. Create a new branch.
-3. Make your changes.
-4. Test your changes.
-5. Open a pull request.
+2. Create a branch for your changes.
+3. Implement and test your changes.
+4. Verify that existing functionality continues to work.
+5. Open a pull request describing the changes.
+
+Because vMACS is still evolving, please check existing issues and discussions before starting large changes. Compatibility and file safety are important considerations for any editing-related contribution.
 
 ---
 
@@ -473,23 +419,21 @@ If you want to contribute:
 
 vMACS was initially developed while following **Philipp Flenker's "Build Your Own Text Editor in Rust" tutorial**.
 
-The tutorial was an important learning resource for understanding how a terminal text editor can be implemented in Rust and served as an early source of inspiration for vMACS.
+The tutorial provided an important foundation for understanding how a terminal-based text editor can be implemented in Rust. It served as an early learning resource and source of inspiration while vMACS developed its own functionality and design.
 
-Even though some parts of the code are similar with the original editor, the goal is to change it until it feels like a new editor rather than a copy.
-
-* **Tutorial:** [Build Your Own Text Editor in Rust](https://github.com/pflenker/hecto-tutorial)
-* **Author:** Philipp Flenker
-* **Example project:** [hecto](https://github.com/pflenker/hecto)
+- **Tutorial:** [Build Your Own Text Editor in Rust](https://github.com/pflenker/hecto-tutorial)
+- **Author:** Philipp Flenker
+- **Example project:** [hecto](https://github.com/pflenker/hecto)
 
 ---
 
 ## License
 
-vMACS is free and open-source software licensed under the **GNU General Public License v3.0**.
+vMACS is free and open-source software licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 
 See the [`LICENSE`](LICENSE) file for the complete license text.
 
-GPL-3.0 allows users to use, study, modify, and redistribute the software, while requiring distributed modified versions covered by the license to preserve the corresponding freedoms.
+The GPL-3.0 permits users to use, study, modify, and redistribute the software under its terms, including requirements that apply when distributing modified versions.
 
 ---
 
