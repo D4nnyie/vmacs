@@ -137,6 +137,7 @@ Its keybindings take inspiration from Vim and Emacs without attempting to reprod
 To view the current keybindings:
 
 - Press `h` on the dashboard.
+- Press `M-h` in any mode.
 - Run `:help` in the editor's command prompt.
 
 Refer to the built-in help screen for the keybindings supported by your installed version.
