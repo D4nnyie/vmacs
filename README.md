@@ -22,7 +22,7 @@ Rather than strictly replicating an existing editor, vMACS takes inspiration fro
 - [x] Copy, cut, and paste
 - [x] Undo and redo
 - [x] Multi-line editing
-- [ ] Multiple buffers
+- [X] Multiple buffers
 
 ### Navigation
 
@@ -56,7 +56,7 @@ vMACS uses three editing modes:
 ### Commands
 
 - [x] Command prompt
-- [~] File commands — implemented, with functionality still evolving
+- [X] File commands — implemented, with functionality still evolving
 - [x] Search commands
 - [x] Search and replace
 - [x] Go-to-line commands
@@ -80,9 +80,9 @@ vMACS uses three editing modes:
 - [x] Configurable mouse behavior
 - [x] Custom language configurations
 - [x] User-defined commands
-- [ ] Custom keybindings
-- [ ] Theme configuration
-- [ ] Comprehensive editor preferences
+- [X] Custom keybindings
+- [~] Theme configuration
+- [~] Comprehensive editor preferences
 
 ### Interface
 
@@ -117,7 +117,6 @@ There are already many excellent terminal editors, and vMACS is not intended to 
 
 The project is an exploration of several ideas:
 
-- **Learning Rust** through the development of a practical application.
 - **Modal editing** that makes navigation and editing efficient without relying entirely on the mouse.
 - **Combining editing philosophies** from Vim, Emacs, and other editors.
 - **Extensibility** through custom language definitions and user-defined commands.
@@ -152,12 +151,14 @@ vMACS is primarily developed and tested on Linux. Other platforms are intended t
 |---|---|
 | Linux | Tested |
 | macOS | Untested |
-| Windows | Untested |
+| Windows | Broken |
 | BSD and other Unix-like systems | Untested |
 
 vMACS uses Rust and Crossterm for terminal interaction, providing a foundation for cross-platform support. However, compatibility may depend on the operating system, terminal emulator, toolchain, and system libraries.
 
 If you encounter a platform-specific issue, please open a GitHub issue and include your operating system, terminal emulator, Rust version, and relevant error output.
+
+`Note: Due to a hardcoded feature, non-Unix-like systems won't be able to build vMACS.`
 
 ---
 
@@ -165,6 +166,7 @@ If you encounter a platform-specific issue, please open a GitHub issue and inclu
 
 - **Rust 1.90 or newer** to build vMACS.
 - A working Rust installation with Cargo.
+- A **Nerd font** for icons. (Unicode alternatives exist)
 - A **Powerline-compatible font** for the intended interface appearance.
 - A compatible terminal emulator.
 
