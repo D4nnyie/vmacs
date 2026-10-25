@@ -73,7 +73,7 @@ A major update focused on improving the editing workflow, navigation, and overal
 - A Powerline-capable font and a Nerd Font are recommended but not required. Unicode alternatives are available for icons, although mode indicators may look unusual without Powerline-compatible glyphs.
 
 ### Requirements
-- Rust 1.90 or newer. Recommended: Latest verison
+- Rust 1.90 or newer.
 
 ---
 
