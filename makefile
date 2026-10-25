@@ -17,6 +17,8 @@ build:
 
 install: build
 	sudo install -Dm755 $(TARGET) $(DESTDIR)$(PREFIX)/bin/$(BINARY)
+	bash install_icon.sh
+	bash install_desktop.sh
 	mkdir -p $(LANGUAGE_DIR)
 	@if [ ! -f "$(LANGUAGE_FILE)" ]; then \
 		printf '%s\n' \
